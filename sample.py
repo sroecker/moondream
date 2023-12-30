@@ -32,6 +32,7 @@ if args.prompt is None:
 
         buffer = ""
         for new_text in streamer:
+            print(new_text)
             buffer += new_text
             if not new_text.endswith("<") and not new_text.endswith("END"):
                 print(buffer, end="", flush=True)
