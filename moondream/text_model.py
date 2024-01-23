@@ -22,11 +22,7 @@ class TextModel:
         self.model = load_checkpoint_and_dispatch(
             self.model,
             f"{model_path}/text_model.pt",
-<<<<<<< HEAD
             device_map={"": self.device},
-=======
-            device_map={"": "cpu"},
->>>>>>> 88e1b57 (release moondream1)
         )
 
         self.text_emb = self.model.get_input_embeddings().to(self.device)
